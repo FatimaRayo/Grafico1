@@ -508,6 +508,19 @@ void main()
     line(137,372,137,397);
     line(216,388,126,388);
 
+
+
+
+
+
+
+
+
+
+
+
+    /*Ambiente de fondo*/
+
     /*Logo UNI*/
 
     rectangle(290,427,350,462);
