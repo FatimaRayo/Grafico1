@@ -32,20 +32,40 @@ void main()
     int cuarto_espacio_inferior[] = {401,280,370,280,370,319,378,319,401,322};
     int espacio_puer[] = {401,354,378,352,370,352,370,427,401,427};
 
+    /*Miniventanas NEGRAS que van en las columnas azules del edificio*/
     /*Izquierda*/
 
-    int pillar1[] = {11, 138, 5, 406, 123, 406, 123, 130, 107, 123, 107, 93, 56, 72, 29, 115, 11, 138};
-    int manchapilar1[] = {25,406,30,113,39,99,80,113,76,406,67,406,70,141,42,132,37,406};
+    int ventnegra1[]={246,79,262,79,262,89,246,98};
+    int ventnegra2[]={246,149,262,149,262,164,246,170};
+    int ventnegra3[]={247,221,262,221,262,241,247,245};
+    int ventnegra4[]={247,294,262,294,262,319,247,321};
+    int ventnegra5[]={247,368,263,368,263,396,247,396};
 
+    /*Derecha*/
+    int ventanegra1[]={393,79,377,79,377,88,393,97};
+    int ventanegra2[]={377,149,393,149,393,170,377,163};
+    int ventanegra3[]={377,221,392,221,392,245,377,241};
+    int ventanegra4[]={377,294,392,294,392,321,377,319};
+    int ventanegra5[]={377,368,392,368,392,396,377,396};
+
+
+
+    /*Pilares*/
+    /*Izquierda*/
+
+    int pillar1[] = {1, 138, 2, 406, 123, 406, 123, 130, 107, 123, 107, 93, 56, 72, 29, 115, 1, 138};
+    int manchapilar1[] = {25,406,30,113,39,99,80,113,76,406,67,406,70,141,42,132,37,406};
 
 
     /*Derecha*/
 
-    int pillar2[] = {610, 115, 628, 138,583, 72,533, 93,533, 123,515, 129, 515, 406,610,406,635, 406,628, 138};
+    int pillar2[] = {610, 115, 640, 138,583, 72,533, 93,533, 123,515, 129, 515, 406,610,406,640, 406,640, 138};
     int manchapilar2[]={569,141,597,133,602,406,610,406,610,115,599,98,561,112,562,406,573,406};
 
 
-    /*parte de enmedio*/
+
+
+    /*parte de en medio*/
 
     int cupula_edificio_azul[]={269,124,270,156,293,163,298,162,293,136};
     int cupula_edificio_gris[]={293,136,298,162,320,156,342,162,346,136,320,111};
@@ -125,6 +145,7 @@ void main()
 
     initgraph(&driver,&modo," ");
 
+
     /* Contorno de pilar superior izquierdo */
     setcolor(WHITE);
     setfillstyle(SOLID_FILL, LIGHTGRAY);
@@ -135,6 +156,176 @@ void main()
 
     setfillstyle(SOLID_FILL,7);
     fillpoly(4,unionpard);
+
+    /*espacios negros de ventana izquierda*/
+
+   setfillstyle(SOLID_FILL,0);
+    fillpoly(4,espacionegro1);
+
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,espacionegro2);
+
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,espacionegro3);
+
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,espacionegro4);
+
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,espacionegro5);
+
+
+
+    /*Lineas de ventanas grandes de la pared gis intermedia*/
+    /*IZQUIERDA grande*/
+
+    line(131,152,131,174);
+   line(137,148,137,170);
+   line(143,143,143,166);
+   line(150,138,150,161);
+   line(157,133,157,157);
+   line(164,128,164,152);
+   line(172,122,172,147);
+   line(180,117,180,142);
+   line(189,110,189,136);
+   line(198,104,198,130);
+   line(208,96,208,123);
+
+
+   line(131,206,131,227);
+   line(137,203,137,224);
+   line(143,200,143,221);
+   line(150,196,150,218);
+   line(157,192,157,214);
+   line(164,188,164,211);
+   line(172,183,172,207);
+   line(180,179,180,203);
+   line(189,173,189,198);
+   line(198,168,198,194);
+   line(208,163,208,189);
+
+
+   line(131,262,131,284);
+   line(137,259,137,282);
+   line(143,257,143,281);
+   line(150,254,150,278);
+   line(157,251,157,276);
+   line(164,248,164,274);
+   line(172,245,172,271);
+   line(180,242,180,269);
+   line(189,238,189,266);
+   line(198,234,198,263);
+   line(208,230,208,260);
+
+
+
+   line(131,316,131,341);
+   line(137,315,137,340);
+   line(143,313,143,339);
+   line(150,312,150,338);
+   line(157,310,157,337);
+   line(164,309,164,336);
+   line(172,307,172,335);
+   line(180,305,180,333);
+   line(189,303,189,332);
+   line(198,301,198,331);
+   line(208,299,208,329);
+
+
+   line(131,373,131,394);
+   line(137,372,137,394);
+   line(143,372,143,394);
+   line(150,372,150,394);
+   line(157,371,157,394);
+   line(164,371,164,394);
+   line(172,371,172,394);
+   line(180,370,180,394);
+   line(189,370,189,394);
+   line(198,369,198,396);
+   line(208,369,208,396);
+
+   line(123,172,216,109);
+   line(123,225,216,177);
+   line(123,279,216,246);
+   line(123,333,216,316);
+   line(123,388,216,388);
+
+
+
+   /*Izquierda pequena*/
+
+   line(127,170,127,176);
+   line(134,165,134,172);
+   line(140,161,140,168);
+   line(147,156,147,163);
+   line(153,152,153,159);
+   line(160,147,160,155);
+   line(168,142,168,149);
+   line(176,137,176,144);
+   line(185,131,185,138);
+   line(194,124,194,132);
+   line(203,118,203,127);
+   line(213,112,213,120);
+
+
+   line(127,223,127,229);
+   line(134,219,134,226);
+   line(140,216,140,223);
+   line(147,213,147,219);
+   line(153,210,153,216);
+   line(160,206,160,213);
+   line(168,202,168,209);
+   line(176,198,176,205);
+   line(185,193,185,200);
+   line(194,188,194,196);
+   line(203,184,203,191);
+   line(213,179,213,186);
+
+
+   line(127,278,127,286);
+   line(134,275,134,283);
+   line(140,273,140,282);
+   line(147,270,147,279);
+   line(153,268,153,277);
+   line(160,266,160,275);
+   line(168,263,168,272);
+   line(176,260,176,270);
+   line(185,257,185,267);
+   line(194,254,194,264);
+   line(203,251,203,261);
+   line(213,247,213,258);
+
+
+   line(127,332,127,341);
+   line(134,331,134,340);
+   line(140,330,140,339);
+   line(147,329,147,338);
+   line(153,328,153,337);
+   line(160,326,160,336);
+   line(168,325,168,335);
+   line(176,323,176,334);
+   line(185,322,185,333);
+   line(194,320,194,331);
+   line(203,318,203,330);
+   line(213,317,213,328);
+
+
+   line(127,388,127,394);
+   line(134,388,134,394);
+   line(140,388,140,394);
+   line(147,388,147,394);
+   line(153,388,153,394);
+   line(160,388,160,394);
+   line(168,388,168,394);
+   line(176,388,176,394);
+   line(185,388,185,394);
+   line(194,388,194,396);
+   line(203,388,203,396);
+   line(213,388,213,396);
+
+
+
+
 
     setfillstyle(SOLID_FILL,8);
     fillpoly(4,espaciogris1);
@@ -163,20 +354,7 @@ void main()
     setfillstyle(SOLID_FILL,1);
     fillpoly(4,espacioazul4);
 
-    setfillstyle(SOLID_FILL,0);
-    fillpoly(4,espacionegro1);
-
-    setfillstyle(SOLID_FILL,0);
-    fillpoly(4,espacionegro2);
-
-    setfillstyle(SOLID_FILL,0);
-    fillpoly(4,espacionegro3);
-
-    setfillstyle(SOLID_FILL,0);
-    fillpoly(4,espacionegro4);
-
-    setfillstyle(SOLID_FILL,0);
-    fillpoly(4,espacionegro5);
+    
 
     line(431,96,431,396);
 
@@ -195,11 +373,179 @@ void main()
 	setfillstyle(SOLID_FILL,8);
     fillpoly(9,manchapilar2);
 
-
-
-
     setfillstyle(SOLID_FILL,7);
     fillpoly(4,unionparedes);
+
+
+    /*espacios negros de ventana derecha*/
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,espanegro1);
+
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,espanegro2);
+
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,espanegro3);
+
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,espanegro4);
+
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,espanegro5);
+
+
+
+    /*Lineas de ventanas grandes de la pared gis intermedia*/
+    /*DERECHA grande*/
+
+    line(508,153,508,174);
+   line(502,148,502,170);
+   line(495,143,495,166);
+   line(489,138,489,161);
+   line(482,133,482,157);
+   line(475,128,475,152);
+   line(467,122,467,147);
+   line(458,117,458,142);
+   line(450,110,450,136);
+   line(441,104,441,130);
+   line(431,96,431,123);
+
+
+   line(508,206,508,227);
+   line(502,203,502,224);
+   line(495,200,495,221);
+   line(489,196,489,218);
+   line(482,192,482,214);
+   line(475,188,475,211);
+   line(467,183,467,207);
+   line(458,179,458,203);
+   line(450,173,450,198);
+   line(441,168,441,194);
+   line(431,163,431,189);
+
+
+   line(508,262,508,284);
+   line(502,259,502,282);
+   line(495,257,495,281);
+   line(489,254,489,278);
+   line(482,251,482,276);
+   line(475,248,475,274);
+   line(467,245,467,271);
+   line(458,242,458,269);
+   line(450,238,450,266);
+   line(441,234,441,263);
+   line(431,230,431,260);
+
+
+
+   line(508,316,508,341);
+   line(502,315,502,340);
+   line(495,313,495,339);
+   line(489,312,489,338);
+   line(482,310,482,337);
+   line(475,309,475,336);
+   line(467,307,467,335);
+   line(458,305,458,333);
+   line(450,303,450,332);
+   line(441,301,441,331);
+   line(431,299,431,329);
+
+
+   line(508,373,508,394);
+   line(502,372,502,394);
+   line(495,372,495,394);
+   line(489,372,489,394);
+   line(482,371,482,394);
+   line(475,371,475,394);
+   line(467,371,467,394);
+   line(458,370,458,394);
+   line(450,370,450,394);
+   line(441,369,441,396);
+   line(431,369,431,396);
+
+   line(515,172,423,109);
+   line(515,225,423,177);
+   line(515,279,423,246);
+   line(515,333,423,316);
+   line(515,388,423,388);
+
+
+
+   /*Derecha pequena*/
+
+   line(512,170,512,176);
+   line(505,165,505,172);
+   line(499,161,499,168);
+   line(492,156,492,163);
+   line(486,152,486,159);
+   line(478,147,478,155);
+   line(471,142,471,149);
+   line(462,137,462,144);
+   line(454,131,454,138);
+   line(446,124,446,132);
+   line(436,118,436,127);
+   line(427,112,427,120);
+
+
+   line(512,223,512,229);
+   line(505,219,505,226);
+   line(499,216,499,223);
+   line(492,213,492,219);
+   line(486,210,486,216);
+   line(478,206,478,213);
+   line(471,202,471,209);
+   line(462,198,462,205);
+   line(454,193,454,200);
+   line(446,188,446,196);
+   line(436,184,436,191);
+   line(427,179,427,186);
+
+
+   line(512,278,512,286);
+   line(505,275,505,283);
+   line(499,273,499,282);
+   line(492,270,492,279);
+   line(486,268,486,277);
+   line(478,266,478,275);
+   line(471,263,471,272);
+   line(462,260,462,270);
+   line(454,257,454,267);
+   line(446,254,446,264);
+   line(436,251,436,261);
+   line(427,247,427,258);
+
+
+   line(512,332,512,341);
+   line(505,331,505,340);
+   line(499,330,499,339);
+   line(492,329,492,338);
+   line(486,328,486,337);
+   line(478,326,478,336);
+   line(471,325,471,335);
+   line(462,323,462,334);
+   line(454,322,454,333);
+   line(446,320,446,331);
+   line(436,318,436,330);
+   line(427,317,427,328);
+
+
+   line(512,388,512,394);
+   line(505,388,505,394);
+   line(499,388,499,394);
+   line(492,388,492,394);
+   line(486,388,486,394);
+   line(478,388,478,394);
+   line(471,388,471,394);
+   line(462,388,462,394);
+   line(454,388,454,394);
+   line(446,388,446,396);
+   line(436,388,436,396);
+   line(427,388,427,396);
+
+
+
+
+    
 
     setfillstyle(SOLID_FILL,8);
     fillpoly(4,espagris1);
@@ -229,20 +575,7 @@ void main()
     fillpoly(4,espaazul4);
 
 
-    setfillstyle(SOLID_FILL,0);
-    fillpoly(4,espanegro1);
-
-    setfillstyle(SOLID_FILL,0);
-    fillpoly(4,espanegro2);
-
-    setfillstyle(SOLID_FILL,0);
-    fillpoly(4,espanegro3);
-
-    setfillstyle(SOLID_FILL,0);
-    fillpoly(4,espanegro4);
-
-    setfillstyle(SOLID_FILL,0);
-    fillpoly(4,espanegro5);
+    
 
 
 
@@ -303,76 +636,210 @@ void main()
 
     /*pared azul frente*/
 
+
     setfillstyle(SOLID_FILL,1);
     fillpoly(9,azul_frente);
 
     setfillstyle(SOLID_FILL,1);
     fillpoly(9,azuldere);
 
+    
+
+    /*lineas medias entre las ventanas de la pared azul del frente */
+    /*Izquierda*/
     line(261,18,261,49);
     line(261,120,261,88);
     line(261,163,261,196);
     line(261,240,261,273);
     line(261,319,261,352);
 
+    /*Derecha*/
     line(378,18,378,48);
     line(378,120,378,88);
     line(378,163,378,196);
     line(378,240,378,273);
     line(378,319,378,352);
+    
+
+    
 
 
-    setfillstyle(SOLID_FILL,7);
+    /*Fondo gris de las ventanas*/
+    setcolor(WHITE);
+    setfillstyle(SOLID_FILL,15);
     fillpoly(4,pimer_espacio_ventanasuperior);
-    setfillstyle(SOLID_FILL,8);
+    setcolor(LIGHTGRAY);
+    setfillstyle(SOLID_FILL,7);
     fillpoly(5,pimer_espacio_ventanainferior);
 
-    setfillstyle(SOLID_FILL,7);
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,ventnegra1);
+
+    
+
+    setcolor(WHITE);
+    setfillstyle(SOLID_FILL,15);
     fillpoly(4,pimer_espacio_superior);
-    setfillstyle(SOLID_FILL,8);
+    setcolor(LIGHTGRAY);
+    setfillstyle(SOLID_FILL,7);
     fillpoly(5,pimer_espacio_inferior);
 
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,ventanegra1);
 
-    setfillstyle(SOLID_FILL,7);
+
+    setcolor(WHITE);
+    setfillstyle(SOLID_FILL,15);
     fillpoly(4,segundo_espacio_ventanasuperior);
-    setfillstyle(SOLID_FILL,8);
+    setcolor(LIGHTGRAY);
+    setfillstyle(SOLID_FILL,7);
     fillpoly(5,segundo_espacio_ventanainferior);
 
-    setfillstyle(SOLID_FILL,7);
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,ventnegra2);
+
+    setcolor(WHITE);
+    setfillstyle(SOLID_FILL,15);
     fillpoly(4,segundo_espacio_superior);
-    setfillstyle(SOLID_FILL,8);
+    setcolor(LIGHTGRAY);
+    setfillstyle(SOLID_FILL,7);
     fillpoly(5,segundo_espacio_inferior);
 
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,ventanegra2);
 
 
-    setfillstyle(SOLID_FILL,7);
+    setcolor(WHITE);
+    setfillstyle(SOLID_FILL,15);
     fillpoly(4,tercer_espacio_ventanasuperior);
-    setfillstyle(SOLID_FILL,8);
+    setcolor(LIGHTGRAY);
+    setfillstyle(SOLID_FILL,7);
     fillpoly(5,tercer_espacio_ventanainferior);
 
-    setfillstyle(SOLID_FILL,7);
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,ventnegra3);
+
+    setcolor(WHITE);
+    setfillstyle(SOLID_FILL,15);
     fillpoly(4,tercer_espacio_superior);
-    setfillstyle(SOLID_FILL,8);
+    setcolor(LIGHTGRAY);
+    setfillstyle(SOLID_FILL,7);
     fillpoly(5,tercer_espacio_inferior);
 
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,ventanegra3);
 
-    setfillstyle(SOLID_FILL,7);
+
+    setcolor(WHITE);
+    setfillstyle(SOLID_FILL,15);
     fillpoly(4,cuarto_espacio_ventanasuperior);
-    setfillstyle(SOLID_FILL,8);
+    setcolor(LIGHTGRAY);
+    setfillstyle(SOLID_FILL,7);
     fillpoly(5,cuarto_espacio_ventanainferior);
 
-    setfillstyle(SOLID_FILL,7);
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,ventnegra4);
+
+    setcolor(WHITE);
+    setfillstyle(SOLID_FILL,15);
     fillpoly(4,cuarto_espacio_superior);
-    setfillstyle(SOLID_FILL,8);
+    setcolor(LIGHTGRAY);
+    setfillstyle(SOLID_FILL,7);
     fillpoly(5,cuarto_espacio_inferior);
 
-    setfillstyle(SOLID_FILL,8);
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,ventanegra4);
+
+    setfillstyle(SOLID_FILL,7);
     fillpoly(5,espacio_puerta);
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,ventnegra5);
 
-    setfillstyle(SOLID_FILL,8);
+    setfillstyle(SOLID_FILL,7);
     fillpoly(5,espacio_puer);
+    setfillstyle(SOLID_FILL,0);
+    fillpoly(4,ventanegra5);
 
-    /*Ventanas del lado izquierdo*/
+
+    /*Divisones de ventanitas negras de pilares azules*/ 
+    /*Izquierda*/       
+    line(246,92,255,92);
+    line(246,93,254,93);
+
+    line(246,163,262,163);
+    line(246,164,262,164);
+
+    line(247,235,262,235);
+    line(247,236,262,236);
+
+    line(247,308,262,308);
+    line(247,309,262,309);
+
+    line(247,382,262,382);
+    line(247,383,262,383);
+
+
+    /*Derecha*/
+
+    line(393,92,385,92);
+    line(393,93,386,93);
+
+    line(393,163,377,163);
+    line(393,164,379,164);
+
+    line(392,235,377,235);
+    line(392,236,377,236);
+
+    line(392,308,377,308);
+    line(392,309,377,309);
+
+    line(392,382,376,382);
+    line(392,383,376,383);
+
+
+
+    
+    /*Lineas grises VERTICALES divisoras*/
+    /*Izquierda*/
+    
+    line(254,163,254,167);
+    line(255,163,255,166);
+
+    line(254,163,254,167);
+    line(255,163,255,166);
+
+    line(254,235,254,243);
+    line(255,235,255,243);
+
+    line(254,308,254,320);
+    line(255,308,255,320);
+
+    line(254,382,254,398);
+    line(255,382,255,398);
+
+
+    /*Derecha*/
+    
+    line(384,163,384,166);
+    line(385,163,385,167);
+
+    line(384,235,384,243);
+    line(385,235,385,243);
+
+    line(384,308,384,320);
+    line(385,308,385,321);
+
+    line(384,382,384,398);
+    line(385,382,385,398);
+
+
+    
+
+
+
+
+    setcolor(WHITE);
+     /*Ventanas del lado izquierdo*/
    rectangle(97,150,113,192);
     setfillstyle(SOLID_FILL, BLACK);
     floodfill(100, 160, WHITE);
@@ -412,6 +879,7 @@ void main()
 
     /*LINEAS DE VENTANAS derecha*/
     setcolor(WHITE);
+    /*Lineas de ventanas de columna gris derceha parte frente*/
 
     line(105,152,105,188);
     line(97,164,113,168);
@@ -420,45 +888,17 @@ void main()
     line(97,211,113,216);
     line(97,227,113,230);
     line(97,272,113,275);
-     line(105,253,105,299);
-     line(105,308,105,340);
-     line(97,324,113,326);
+    line(105,253,105,299);
+    line(105,308,105,340);
+    line(97,324,113,326);
 
-   line(441,104,441,129);
-   line(457,117,457,141);
-   line(472,127,472,149);
-   line(488,139,488,159);
-   line(501,148,501,168);
-   line(423,108,515,171);
+    
+    
+    
 
-   line(441,168,441,193);
-   line(457,178, 457,201);
-   line(472,186,472,209);
-   line(488,195,488,217);
-   line(501,202,501,223);
-   line(423,177,514,223);
+   
 
-   line(441,235,441,262);
-   line(457,241,457,266);
-   line(472,247,472,271);
-   line(488,254,488,276);
-   line(501,259,501,280);
-   line(423,246,516,279);
-
-   line(441,302,441,329);
-   line(456,306,456,331);
-   line(472,309,472,334);
-   line(488,312,488,336);
-   line(501,317,501,337);
-   line(423,316,516,333);
-
-   line(441,371,441,399);
-   line(456,370,456,398);
-   line(472,372,472,398);
-   line(488,373,488,397);
-   line(500,374,500,396);
-   line(423,389,512,389);
-
+   
    /*lineas de ventanas izquierda*/
 
 
@@ -473,53 +913,8 @@ void main()
      line(542,279,526,279);
      line(542,323,526,323);
 
-   line(198,105,198,129);
-   line(180,119,180,141);
-   line(165,129,165,151);
-   line(150,141,150,161);
-   line(137,150,137,170);
-   line(216,109,126,170);
-
-   line(198,169,198,195);
-   line(180,179,180,203);
-   line(165,188,165,211);
-   line(150,196,150,218);
-   line(137,203,137,224);
-   line(216,176,126,224);
-
-    line(198,235,198,262);
-    line(180,242,180,268);
-    line(165,248,165,272);
-    line(150,254,150,278);
-    line(137,259,137,281);
-    line(216,247,126,278);
-
-    line(198,302,198,330);
-    line(180,307,180,332);
-    line(165,311,165,335);
-    line(150,313,150,337);
-    line(137,316,137,338);
-    line(216,317,126,334);
-
-    line(198,370,198,397);
-    line(180,372,180,397);
-    line(165,372,165,397);
-    line(150,372,150,397);
-    line(137,372,137,397);
-    line(216,388,126,388);
-
-
-
-
-
-
-
-
-
-
-
-
-    /*Ambiente de fondo*/
+   
+    
 
     /*Logo UNI*/
 
